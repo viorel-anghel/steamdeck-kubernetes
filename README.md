@@ -26,8 +26,8 @@ curl -sfL https://get.rke2.io >rke2.sh
 
 7. before running the installer, /var is very limited on space. create a symbolic link like this:
 ```
-    mkdir /opt/var_lib_rancher
-    ln -s /opt/var_lib_rancher /var/lib/rancher
+mkdir /opt/var_lib_rancher
+ln -s /opt/var_lib_rancher /var/lib/rancher
 ```
 
 8. before running the installer, change the hostname if you plan to create a cluster
@@ -80,6 +80,26 @@ steamdeck1   Ready    control-plane,etcd,master   6m4s   v1.24.4+rke2r1
 14. if you wish this to start on boot, run `systemctl enable rke2-server`
 
 15. if you setup a single node that's all. you can run kubectl commands now.
+
+---
+
+## For the second and third node
+
+Steps up until step 10 are the same. Only the rke installation is different.
+
+```
+mkdir /etc/rancher/rke2/   # create this directory
+nano /etc/rancher/rke2/config.yaml # create a file in there
+```
+with this content
+```
+# file /etc/rancher/rke2/config.yaml
+server: https://<FIRST-NODE-IP>:9345
+token: <get this from FIRST NODE file /var/lib/rancher/rke2/server/node-token>
+```
+
+After you have this config file,  steps 10 + 11 are the same. When this id done, ssh into the first node
+and verify `kubectl get nodes`. Wait until the nodes are in *Ready* state.
 
 
     
