@@ -98,8 +98,12 @@ server: https://<FIRST-NODE-IP>:9345
 token: <get this from FIRST NODE file /var/lib/rancher/rke2/server/node-token>
 ```
 
-After you have this config file,  steps 10 + 11 are the same. When this id done, ssh into the first node
+After you have this config file,  steps 10 + 11 are the same. When this is done, ssh into the first node
 and verify `kubectl get nodes`. Wait until the nodes are in *Ready* state.
 
+Steps 12, 13 are optional on second/thirs node. Do step 14 though.
 
+## Full cleanup
+
+If you wish to restore the setup in the original state
     
