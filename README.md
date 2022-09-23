@@ -88,7 +88,7 @@ steamdeck1   Ready    control-plane,etcd,master   6m4s   v1.24.4+rke2r1
 Steps up until step 10 are the same. Only the rke installation is different.
 
 ```
-mkdir /etc/rancher/rke2/   # create this directory
+mkdir -p /etc/rancher/rke2/   # create this directory
 nano /etc/rancher/rke2/config.yaml # create a file in there
 ```
 with this content
@@ -105,5 +105,5 @@ Steps 12, 13 are optional on second/thirs node. Do step 14 though.
 
 ## Full cleanup
 
-If you wish to restore the setup in the original state
-    
+If you wish to restore the setup in the original state, rke2 can be uninstalled with the script `rke2-uninstall.sh` (as root, obviously). If you wish, also stop and disable sshd.
+
