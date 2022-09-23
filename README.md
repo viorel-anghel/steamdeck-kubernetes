@@ -85,7 +85,7 @@ steamdeck1   Ready    control-plane,etcd,master   6m4s   v1.24.4+rke2r1
 
 ## For the second and third node
 
-Steps up until step 10 are the same. Only the rke installation is different. 
+Steps up until step 10 are the same. 
 You need to create a config file before the step 10:
 
 ```
