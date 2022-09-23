@@ -103,7 +103,9 @@ and verify `kubectl get nodes`. Wait until the nodes are in *Ready* state.
 
 Steps 12, 13 are optional on second/thirs node. Do step 14 though.
 
+---
+
 ## Full cleanup
 
-If you wish to restore the setup in the original state, rke2 can be uninstalled with the script `rke2-uninstall.sh` (as root, obviously). If you wish, also stop and disable sshd.
+If you wish to restore the system in the original state, rke2 can be uninstalled with the script `rke2-uninstall.sh` (as root, obviously). If you wish, also stop and disable sshd.
 
