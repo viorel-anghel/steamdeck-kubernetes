@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: dummy
-          image: vvang/autoscaling-demo:0.2
+          image: vvang/autoscaling-demo:0.3
           livenessProbe:
             httpGet:
               path: /
@@ -34,5 +34,5 @@ spec:
               cpu: 10m
               memory: 1Mi
             limits:
-              memory: 10Mi
+              memory: 20Mi
 

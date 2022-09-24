@@ -5,14 +5,19 @@ metadata:
   namespace: default
 spec:
   maxReplicas: 10
+  minReplicas: 2
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 30
+    scaleUp:
+      stabilizationWindowSeconds: 30
   metrics:
   - resource:
       name: cpu
       target:
-        averageUtilization: 10
+        averageUtilization: 25
         type: Utilization
     type: Resource
-  minReplicas: 2
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
