@@ -13,9 +13,14 @@ function make_seed()
 }
 srand(make_seed());
 
-$x = rand();
-$y = rand();
-$z = log(sqrt($x * $y));
-echo "random result: $z";
+echo "running some random computation...";
+for ($i=0; $i<1000; $i++) {
+  $x = rand();
+  $y = rand();
+  $z = log(sqrt($x * $y));
+//  echo "step $i random result = $z \n<br>";
+}
+echo "done.";
+
 ?>
 
