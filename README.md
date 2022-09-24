@@ -1,6 +1,6 @@
 # steamdeck kubernetes
 
-WARNING FORMATTING IN PROGRESS
+Read the official RKE2 Kubernetes installef docs at https://docs.rke2.io/
 
 1. 
 - on steamdeck open terminal: click STEAM button, scroll down to Power, choose *Switch to desktop*
