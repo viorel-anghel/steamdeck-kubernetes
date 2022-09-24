@@ -14,7 +14,7 @@ function make_seed()
 srand(make_seed());
 
 echo "running some random computation...";
-for ($i=0; $i<1000; $i++) {
+for ($i=0; $i<10000; $i++) {
   $x = rand();
   $y = rand();
   $z = log(sqrt($x * $y));
