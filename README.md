@@ -5,7 +5,7 @@ Read the official RKE2 Kubernetes installef docs at https://docs.rke2.io/
 1. 
 - on steamdeck open terminal: click STEAM button, scroll down to Power, choose *Switch to desktop*
 then menu - konsole
-- in terminal (konsole) use the command 'passwd' to setup a password for user deck
+- in terminal (konsole) use the command `passwd` to setup a password for user deck
 - note STEAM+X shortcut to open the virtual keyboard
 
 2. become root using `sudo su`. ignore the error 'tune2fs bad magick number'. you are root
@@ -103,6 +103,8 @@ After you have this config file,  steps 10 + 11 are the same. When this is done,
 and verify `kubectl get nodes`. Wait until the nodes are in *Ready* state.
 
 Steps 12, 13 are optional on second/thirs node. Do step 14 though.
+
+The final result will be something like this. In screenshot, one of the nodes is *NotReady* yet.
 
 ![kubectl get nodes](kubectl-get-nodes.png)
 
