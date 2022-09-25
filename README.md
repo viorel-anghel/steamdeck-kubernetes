@@ -104,6 +104,8 @@ and verify `kubectl get nodes`. Wait until the nodes are in *Ready* state.
 
 Steps 12, 13 are optional on second/thirs node. Do step 14 though.
 
+![kubectl get nodes](kubectl-get-nodes.png)
+
 ---
 
 ## Full cleanup
